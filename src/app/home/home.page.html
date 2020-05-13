@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      SymPass
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+  <ion-card center class="card">
+    <img class="logo" src="./../../../assets/5.png "/>
+    <ion-card-header class="text-signIn">
+      Sign in
+    </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-card-content>
+      <ion-list class="list">
+        <ion-item class="mail">
+          <ion-input  placeholder="email" [(ngModel)]="email" type="email"></ion-input>
+        </ion-item>
+        <ion-item class="passw">
+          <ion-input  type="password"  placeholder="password" [(ngModel)]="pass" ></ion-input>
+        </ion-item>
+      </ion-list>
+      <div class="forgot">
+        <ion-button expand="block" shape="round" color="light" (click)="signIn()">Sign in</ion-button>
+        <ion-icon class="icon" name="lock-closed"></ion-icon>
+        <a mat-button href="https://www.google.com/" target="_blank">forgot password?</a>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="up" fill="clear" routerLink="/registrar">Sign up</ion-button>
 </ion-content>

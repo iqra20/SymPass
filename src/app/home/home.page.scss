@@ -1,27 +1,49 @@
-#container {
-  text-align: center;
+//color de cuadro
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.card{
+    background-color: #bb64bb;
+    max-height: 385px;
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+//logo modification
+.logo{
+    padding-top: 20px;
+    padding-left: 45px;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+//sign in text
+.text-signIn{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
 }
-
-#container a {
-  text-decoration: none;
+//campo de email
+.list{border-radius: 25px;
+} 
+.mail {
+   
+    border-radius: 25px;
+    margin-block: 5px;
+    color:black;
 }
+//campo de password
+.passw{
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+//botton
+.forgot .icon{
+    color: white;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.forgot a{
+    text-size-adjust: inherit;
+    font-size: 1em;
+    color: white;
+}
+//sign up button
+.up{
+    color: #bb64bb;
+    font-size: 1.1em;
+    margin-left: 95px;
+} 
