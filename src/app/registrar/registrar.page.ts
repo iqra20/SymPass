@@ -8,25 +8,35 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class RegistrarPage implements OnInit {
 
-  username:string;
+  name:string;
   email:string;
-  pass:String;
-  passCon:string;
+  pass:string;
+  telephone:string;
 
   constructor(private router: Router) { 
   }
-
-  signup(){
-    var id:number;
-    var navigationExtras: NavigationExtras = {
-      state: {
-        parametros: id,
-      }
-    };
-    this.router.navigate(['lista'], navigationExtras);
-  }
+  ngOnInit() {}
   
-  ngOnInit() {
-  }
+  signup() {
+    fetch("http://3.124.237.156:8080/user", {
+      "method": "POST",
+      "headers": {
+        'Content-Type': 'application/json'
+      },
+      "body": JSON.stringify({
+        "name": this.name,
+        "password": this.pass,
+        "email": this.email,
+        "telephone": this.telephone
+      })
+    })
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['lista']);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
   
 }
