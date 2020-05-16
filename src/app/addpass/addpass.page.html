@@ -1,9 +1,32 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>addpass</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Añadir Password</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <ion-item>
+    <ion-label >Title</ion-label>
+    <ion-input [(ngModel)]="title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Username</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Link</ion-label>
+    <ion-input [(ngModel)]="link"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-input [(ngModel)]="description"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="anadirPass()">Añadir</ion-button>
 </ion-content>

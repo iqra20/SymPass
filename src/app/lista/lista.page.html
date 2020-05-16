@@ -5,5 +5,13 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-item style="font-size: 14px;" *ngFor="let pass of passwordList" (click)="thisPassword(pass)" >
+    <ion-img style="width: 4em;" class="foto"  src="../../assets/icon/{{pass.icon}}"></ion-img>
+    {{pass.title}}
+  </ion-item> 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/addpass">
+    <ion-fab-button size="small">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
