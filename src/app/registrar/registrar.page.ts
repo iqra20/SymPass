@@ -11,7 +11,6 @@ export class RegistrarPage implements OnInit {
   name:string;
   email:string;
   pass:string;
-  passCon:string;
   telephone:string;
 
   constructor(private router: Router) { 
@@ -20,17 +19,13 @@ export class RegistrarPage implements OnInit {
   
   check(){
 
-    if(this.name.length*this.email.length*this.pass.length>0){
-      console.log("comparando contraseñas..");
+    if(this.name.length*this.email.length*this.pass.length*this.telephone.length>0){
       this.signup();
     }else{
       console.log("Encontrado un campo vacio");
     }
   }
   signup() {
-    console.log("password1 ="+this.pass+" password2="+this.passCon);
-    console.log(this.pass===this.passCon);
-    if(this.pass===this.passCon){
       fetch("http://3.124.237.156:8080/user", {
         "method": "POST",
         "headers": {
@@ -45,12 +40,10 @@ export class RegistrarPage implements OnInit {
       })
         .then(response => {
           console.log(response);
-          this.router.navigate(['lista']);
+          this.router.navigate(['home']);
         })
         .catch(err => {
           console.log(err);
         });
-    }
   }
-  
 }
