@@ -1,22 +1,35 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>detalle_pass</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>
-        {{password.title}}
-      </ion-card-subtitle>
-      <ion-card-title>
-        {{password.username}}
-      </ion-card-title>
-    </ion-card-header>
-    <img src="../../assets/icon/{{password.icon}}">
-    <ion-card-content>
-      {{password.description}}
-    </ion-card-content>
-  </ion-card>
+  <ion-list class="list">
+    <ion-item class="title">
+      <ion-label position="floating">Title : {{password.title}}</ion-label>
+      <ion-input [(ngModel)]="title"></ion-input>
+    </ion-item>
+    <ion-item class="user">
+      <ion-label position="floating">Username  : {{password.username}}</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item class="pass">
+      <ion-label position="floating">Password  : {{password.password}}</ion-label>
+      <ion-input [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <ion-item class="link">
+      <ion-label position="floating">Link  : {{password.link}}</ion-label>
+      <ion-input [(ngModel)]="link"></ion-input>
+    </ion-item>
+    <ion-item class="descrip">
+      <ion-label position="floating">Description  : {{password.description}}</ion-label>
+      <ion-textarea [(ngModel)]="description"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  
 </ion-content>
