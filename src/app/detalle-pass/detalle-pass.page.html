@@ -5,5 +5,18 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        {{password.title}}
+      </ion-card-subtitle>
+      <ion-card-title>
+        {{password.username}}
+      </ion-card-title>
+    </ion-card-header>
+    <img src="../../assets/icon/{{password.icon}}">
+    <ion-card-content>
+      {{password.description}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

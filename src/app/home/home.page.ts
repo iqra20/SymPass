@@ -41,7 +41,7 @@ export class HomePage {
     console.log(id+" connectando..");
     let navigationExtras: NavigationExtras = {
       state: {
-        parametros: id,
+        parametros: id
       }
     };
     this.router.navigate(['lista'], navigationExtras);
