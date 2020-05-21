@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="fondo">
   <ion-list class="list">
     <ion-item class="title">
       <ion-label position="floating">Title : {{password.title}}</ion-label>
@@ -31,7 +31,7 @@
       <ion-textarea [(ngModel)]="description"></ion-textarea>
     </ion-item>
   </ion-list>
-  <div>
+  <div class="btns">
     <ion-button  class="save" (click)="anadirPass()" color="success">Save</ion-button>
     <ion-button  class="can" (click)="Delete()" color="danger">Delete</ion-button>
   </div>
