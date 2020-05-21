@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar class="header">
-    <ion-title>lista</ion-title>
+    <ion-title>Lista</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +9,7 @@
     <ion-img class="icon"  src="../../assets/icon/{{pass.icon}}"></ion-img>
     {{pass.title}}
   </ion-item> 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/addpass">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="create()">
     <ion-fab-button color="light" size="small">
       <ion-icon style=" color: #000;"name="add"></ion-icon>
     </ion-fab-button>

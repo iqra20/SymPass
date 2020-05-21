@@ -21,7 +21,7 @@ export class ListaPage implements OnInit {
   }
   ngOnInit() {
   }
-
+  
   thisPassword(password){
     console.log(password);
     let navigationExtras: NavigationExtras = {
@@ -32,6 +32,14 @@ export class ListaPage implements OnInit {
     this.router.navigate(['detalle-pass'], navigationExtras);
 
   }
+  create(){
+    let navigationExtras: NavigationExtras = {
+      state: {
+        parametros: this.id
+      }
+    };
+    this.router.navigate(['addpass'], navigationExtras);
+}
 
   async getJson(apiConnection){
 //    const respuesta = await fetch("../../assets/test.json");

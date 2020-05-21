@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="header">
     <ion-title>
       SymPass
     </ion-title>
@@ -14,16 +14,14 @@
     </ion-card-header>
 
     <ion-card-content>
-      <ion-list class="list">
         <ion-item class="mail">
           <ion-input clearInput placeholder="email" [(ngModel)]="email" type="email"></ion-input>
         </ion-item>
         <ion-item class="passw">
           <ion-input  clearInput type="password"  placeholder="password" [(ngModel)]="pass" ></ion-input>
         </ion-item>
-      </ion-list>
       <div class="forgot">
-        <ion-button expand="block" shape="round" color="light" (click)="checkAccount()">Sign in</ion-button>
+        <ion-button id="signIn" expand="block" shape="round"  (click)="checkAccount()">Sign in</ion-button>
         <ion-icon class="icon" name="lock-closed"></ion-icon>
         <a mat-button href="https://www.google.com/" target="_blank">forgot password?</a>
       </div>

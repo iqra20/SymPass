@@ -1,20 +1,33 @@
+.toolbar{
+    --background: #bb64bb;
+    font-family: Bahnschrift Condensed;
+    color:white;
+}
+#back{
+    color:white;
+}
 //logo
 .logo{
-    padding-top: 25px;
-    padding-left: 65px;
+    padding-top: 10px;
+    padding-left: 70px;
+    
+}
+
+.list{
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    
 }
 //text de sign in
 .header{
     padding-left: 38%;
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: #bb64bb;
-    margin-bottom: 10px;
-}
-.list{
-    padding-left: 15px;
-    padding-right: 20px;
-    size: 20px;
-    
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Bahnschrift Condensed;
 }
 .name{
     border: 2px solid #bb64bb;
@@ -37,6 +50,9 @@
     margin-bottom: 5px;
 }
 .btn{
-    margin: 15px;
+    //margin: 15px;
+    padding-left: 15px;
+    padding-right: 20px;
+   
 }
 

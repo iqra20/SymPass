@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-addpass',
@@ -12,8 +12,15 @@ export class AddpassPage implements OnInit {
   password :string;
   link :string;
   description :string;
-  constructor(private router: Router) { }
-
+  constructor(private router: Router,private route: ActivatedRoute) { 
+    this.route.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.id = this.router.getCurrentNavigation().extras.state.parametros;
+        console.log("en añadir pass estoy"+this.id);
+      }
+    });
+  }
+  public id :string;
   ngOnInit() {
   }
 
@@ -21,7 +28,7 @@ export class AddpassPage implements OnInit {
     
   }
   async anadirPass() {
-    fetch("http://3.124.237.156:8080/password/1", {
+    fetch("http://3.124.237.156:8080/password/"+this.id, {
       "method": "POST",
       "headers": {
         'Content-Type': 'application/json'

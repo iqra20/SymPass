@@ -8,7 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./detalle-pass.page.scss'],
 })
 export class DetallePassPage implements OnInit {
-
+  title :string;
+  username :string;
+  pass :string;
+  link :string;
+  description :string;
   password:any;
 
   constructor(private route: ActivatedRoute, private router: Router) {
@@ -18,8 +22,15 @@ export class DetallePassPage implements OnInit {
       }
     });
    }
-
   ngOnInit() {
   }
+
+  async Delete(){
+
+  }
+  async anadirPass() {
+
+  }
+
 
 }

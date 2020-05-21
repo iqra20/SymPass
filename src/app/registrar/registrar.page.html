@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>registrar</ion-title>
-    <ion-buttons slot="start">
+  <ion-toolbar class="toolbar">
+    <ion-title>Registrar</ion-title>
+    <ion-buttons slot="start" id="back">
       <ion-back-button>
    </ion-back-button>
    </ion-buttons>   
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding >
+<ion-content  id="content">
   <img class="logo" src="../../assets/6.png "/>
   
   <ion-list class="list">
@@ -28,5 +28,5 @@
       <ion-input clearInput placeholder="telephone" [(ngModel)]="telephone" type="text"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button  class="btn" expand="block" shape="round"  (click)="check()">Sign up</ion-button>
+  <ion-button class="btn" expand="block" shape="round"  (click)="check()" color="secondary">Sign up</ion-button>
 </ion-content>
