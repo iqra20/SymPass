@@ -1,0 +1,27 @@
+#header{
+    --background: #bb64bb;
+    font-family: Bahnschrift Condensed;
+    color:white;
+}
+
+
+.card{
+    background-color: #bb64bb;
+}
+.text{
+    text-align: center;
+    color: white;
+    font-size: 1.6em;
+    font-family: Bahnschrift Condensed;
+    margin-top: 15px;
+}
+.email{
+    border: 2px solid #bb64bb;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+//botton
+.btn{
+    box-sizing: content-box;
+    
+}
