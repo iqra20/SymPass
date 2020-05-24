@@ -26,11 +26,41 @@ export class DetallePassPage implements OnInit {
   }
 
   async Delete(){
-
-  }
+    fetch("http://3.124.237.156:8080/password/"+this.password.id, {
+      "method": "DELETE"
+    })
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['lista']);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
   async anadirPass() {
-
-  }
+    fetch("http://3.124.237.156:8080/password/"+this.password.id, {
+      "method": "PUT",
+      "headers": {
+        'Content-Type': 'application/json'
+      },
+      "body": JSON.stringify({
+        "title": this.title,
+        "username": this.username,
+        "password": this.pass,
+        "description": this.description,
+        "link": this.link,
+        "type":3,
+        "icon":"correo.png"
+      })
+    })
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['lista']);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }
 
 
 }

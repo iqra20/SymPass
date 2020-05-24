@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>forgot</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Insert your mail address </ion-label>
+    <ion-textarea [(ngModel)]="mail"></ion-textarea>
+  </ion-item>
+  <ion-button (click)="sendMail()" color="success">Save</ion-button>
+</ion-content>
