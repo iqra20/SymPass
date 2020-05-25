@@ -1,18 +1,24 @@
 .icon{
     width: 4em;
-    margin-right: 10px;
+    margin-bottom:5px;
+    margin-top: 5px;
+    margin-right: 15px;;
 }
 
 .fondo{
-    --background: #bb64bb;
+    --background:#F5F5F6;
+}
+#fab  {
+    --background:#bbbbbb;
 }
 
 .tarjeta{
     --padding-start:5px;
     margin: 4px;
-    font-size: 14px ;
     font-family: Bahnschrift Light;
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+    --background: #e1e2e1;
 }
 
 .header{

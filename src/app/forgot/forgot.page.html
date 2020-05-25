@@ -1,6 +1,10 @@
 <ion-header>
   <ion-toolbar id="header">
     <ion-title>forgot password</ion-title>
+    <ion-buttons slot="start" id="back">
+      <ion-back-button>
+   </ion-back-button>
+   </ion-buttons> 
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +15,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item class="email" lines="none">
-        <ion-input [(ngModel)]="mail" placeholder="email@address.com"></ion-input>
+        <ion-input  placeholder="email@address.com"></ion-input>
       </ion-item>
       <ion-button class="btn" expand="block" shape="round" (click)="sendMail()" color="primary">Send</ion-button>
     </ion-card-content>
