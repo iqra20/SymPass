@@ -21,7 +21,8 @@ const routes: Routes = [
   {
     path: 'detalle-pass',
     loadChildren: () => import('./detalle-pass/detalle-pass.module').then( m => m.DetallePassPageModule)
-  },  {
+  },
+  {
     path: 'forgot',
     loadChildren: () => import('./forgot/forgot.module').then( m => m.ForgotPageModule)
   },

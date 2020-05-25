@@ -11,7 +11,7 @@
 
 <ion-content class="fondo">
   <ion-item class="tarjeta" *ngFor="let pass of passwordList" (click)="thisPassword(pass)" >
-    <ion-img class="icon"  src="../../assets/icon/{{pass.icon}}"></ion-img>
+    <ion-img class="icon"  src="{{pass.icon}}"></ion-img>
     {{pass.title}}
   </ion-item> 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="create()">
