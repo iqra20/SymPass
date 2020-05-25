@@ -9,29 +9,39 @@
 </ion-header>
 <ion-content>
   <ion-list class="list">
-    <ion-item class="title">
+    <img class="img" (click)="openModal()" src="{{icon}}">
+    <ion-item item-right class="mainItems">
       <ion-label position="floating">Title</ion-label>
       <ion-input [(ngModel)]="title"></ion-input>
     </ion-item>
-    <ion-item class="user">
+    <ion-item class="mainItems">
       <ion-label position="floating">Username</ion-label>
       <ion-input [(ngModel)]="username"></ion-input>
     </ion-item>
-    <ion-item class="pass">
+    <ion-item class="inputItem">
       <ion-label position="floating">Password</ion-label>
       <ion-input [(ngModel)]="password"></ion-input>
     </ion-item>
-    <ion-item class="link">
+    <ion-item class="inputItem">
       <ion-label position="floating">Link</ion-label>
       <ion-input [(ngModel)]="link"></ion-input>
     </ion-item>
-    <ion-item class="descrip">
+    <ion-item class="inputItem">
       <ion-label position="floating">Description</ion-label>
       <ion-textarea [(ngModel)]="description"></ion-textarea>
+    </ion-item>
+    <ion-item class="inputItem">
+      <ion-label>Type</ion-label>
+    <ion-select id="customTypeSelec" [(ngModel)]="type" placeholder="Select" interface="popover">
+      <ion-select-option value="0">Social</ion-select-option>
+      <ion-select-option value="1">Mail</ion-select-option>
+      <ion-select-option value="2">Work</ion-select-option>
+      <ion-select-option value="3">Extra</ion-select-option>
+    </ion-select>
     </ion-item>
   </ion-list>
   <div>
     <ion-button  class="save" (click)="anadirPass()" color="success">Save</ion-button>
-    <ion-button  class="can" (click)="cancelar()" color="secondary">Cancel</ion-button>
+    <ion-button  class="can" routerLink="/lista" color="secondary">Cancel</ion-button>
   </div>
 </ion-content>

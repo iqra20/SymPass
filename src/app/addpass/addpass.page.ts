@@ -1,5 +1,7 @@
+import { ModalImgPage } from './../modal-img/modal-img.page';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-addpass',
@@ -8,11 +10,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AddpassPage implements OnInit {
   title :string;
+  type:number;
   username :string;
   password :string;
   link :string;
   description :string;
-  constructor(private router: Router,private route: ActivatedRoute) { 
+  icon:string="../../assets/icon/img.png";
+  constructor(private router: Router,private route: ActivatedRoute,private modalCtrl:ModalController) { 
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.id = this.router.getCurrentNavigation().extras.state.parametros;
@@ -22,6 +26,18 @@ export class AddpassPage implements OnInit {
   }
   public id :string;
   ngOnInit() {
+  }
+
+  async openModal(){
+    const modal=await this.modalCtrl.create({
+      component: ModalImgPage,
+    });
+
+    await modal.present();
+    const { data }= await modal.onDidDismiss();
+    console.log("retorno "+ data.url);
+    this.icon=data.url;
+    console.log(this.icon);
   }
 
   async cancelar(){
@@ -39,8 +55,8 @@ export class AddpassPage implements OnInit {
         "password": this.password,
         "description": this.description,
         "link": this.link,
-        "type":3,
-        "icon": "correo.png"
+        "type":this.type,
+        "icon": this.icon
       })
     })
       .then(response => {
