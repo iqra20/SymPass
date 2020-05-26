@@ -7,28 +7,23 @@
     <ion-title>Añadir Password</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content class="fondo">
   <ion-list class="list">
     <img class="img" (click)="openModal()" src="{{icon}}">
     <ion-item item-right class="mainItems">
-      <ion-label position="floating">Title</ion-label>
-      <ion-input [(ngModel)]="title"></ion-input>
+      <ion-input [(ngModel)]="title" placeholder="title"></ion-input>
     </ion-item>
     <ion-item class="mainItems">
-      <ion-label position="floating">Username</ion-label>
-      <ion-input [(ngModel)]="username"></ion-input>
+      <ion-input [(ngModel)]="username" placeholder="username"></ion-input>
     </ion-item>
     <ion-item class="inputItem">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input [(ngModel)]="password"></ion-input>
+      <ion-input [(ngModel)]="password" placeholder="password"></ion-input>
     </ion-item>
     <ion-item class="inputItem">
-      <ion-label position="floating">Link</ion-label>
-      <ion-input [(ngModel)]="link"></ion-input>
+      <ion-input [(ngModel)]="link" placeholder="link"></ion-input>
     </ion-item>
     <ion-item class="inputItem">
-      <ion-label position="floating">Description</ion-label>
-      <ion-textarea [(ngModel)]="description"></ion-textarea>
+      <ion-textarea [(ngModel)]="description" placeholder="description"></ion-textarea>
     </ion-item>
     <ion-item class="inputItem">
       <ion-label>Type</ion-label>
@@ -40,8 +35,8 @@
     </ion-select>
     </ion-item>
   </ion-list>
-  <div>
-    <ion-button  class="save" (click)="anadirPass()" color="success">Save</ion-button>
-    <ion-button  class="can" routerLink="/lista" color="secondary">Cancel</ion-button>
+  <div id="btns">
+    <ion-button  class="save" (click)="anadirPass()" color="secondary">Save</ion-button>
+    <ion-button  class="can" routerLink="/lista" color="secondary" fill="outline">Cancel</ion-button>
   </div>
 </ion-content>

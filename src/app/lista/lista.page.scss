@@ -9,16 +9,19 @@
     --background:#F5F5F6;
 }
 #fab  {
-    --background:#bbbbbb;
+    --background:#bb64bb;
 }
+#text{
+    font-size: 1.3em;
+    font-weight: bold;
 
+}
 .tarjeta{
     --padding-start:5px;
-    margin: 4px;
+    margin: 6px;
     font-family: Bahnschrift Light;
-    font-weight: bold;
-    font-size: 1.1em;
     --background: #e1e2e1;
+    border-radius: 3px;
 }
 
 .header{
