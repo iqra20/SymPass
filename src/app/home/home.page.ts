@@ -12,11 +12,13 @@ export class HomePage {
   pass:string; 
   id:string
   status:string;
+  
   constructor(private router: Router) { 
 
   }
 
   async checkAccount(){
+    
     fetch("http://3.124.237.156:8080/login", {
       "method": "POST",
       "headers": {

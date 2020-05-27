@@ -10,25 +10,30 @@
 
 <ion-content class="fondo">
   <ion-list class="list">
-    <ion-item text-wrap class="title">
-      <ion-label position="floating">Title : {{password.title}}</ion-label>
-      <ion-input text-wrap [(ngModel)]="title"></ion-input>
+    <img class="img" (click)="openModal()" src="{{password.icon}}">
+    <ion-item item-right class="mainItems">
+      <ion-input [(ngModel)]="title" placeholder="{{password.title}}"></ion-input>
     </ion-item>
-    <ion-item class="user">
-      <ion-label position="floating">Username  : {{password.username}}</ion-label>
-      <ion-input [(ngModel)]="username"></ion-input>
+    <ion-item class="mainItems">
+      <ion-input [(ngModel)]="username" placeholder="{{password.username}}"></ion-input>
     </ion-item>
-    <ion-item class="pass">
-      <ion-label position="floating">Password  : {{password.password}}</ion-label>
-      <ion-input [(ngModel)]="pass"></ion-input>
+    <ion-item class="inputItem">
+      <ion-input [(ngModel)]="pass" placeholder="{{password.password}}"></ion-input>
     </ion-item>
-    <ion-item class="link">
-      <ion-label position="floating">Link  : {{password.link}}</ion-label>
-      <ion-input [(ngModel)]="link"></ion-input>
+    <ion-item class="inputItem">
+      <ion-input [(ngModel)]="link" placeholder="{{password.link}}"></ion-input>
     </ion-item>
-    <ion-item class="descrip">
-      <ion-label position="floating">Description  : {{password.description}}</ion-label>
-      <ion-textarea [(ngModel)]="description"></ion-textarea>
+    <ion-item class="inputItem">
+      <ion-textarea [(ngModel)]="description" placeholder="{{password.description}}"></ion-textarea>
+    </ion-item>
+    <ion-item class="inputItem">
+      <ion-label>Type</ion-label>
+    <ion-select id="customTypeSelec" [(ngModel)]="type" placeholder="{{text}}" interface="popover">
+      <ion-select-option value="0">Social</ion-select-option>
+      <ion-select-option value="1">Mail</ion-select-option>
+      <ion-select-option value="2">Work</ion-select-option>
+      <ion-select-option value="3">Extra</ion-select-option>
+    </ion-select>
     </ion-item>
   </ion-list>
   <div class="btns">

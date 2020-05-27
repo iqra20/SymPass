@@ -15,7 +15,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item class="email" lines="none">
-        <ion-input  placeholder="email@address.com"></ion-input>
+        <ion-input [(ngModel)]="mail" placeholder="email@address.com"></ion-input>
       </ion-item>
       <ion-button class="btn" expand="block" shape="round" (click)="sendMail()" color="primary">Send</ion-button>
     </ion-card-content>

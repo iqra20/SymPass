@@ -15,8 +15,12 @@ export class ForgotPage implements OnInit {
   }
 
   sendMail(){
+    console.log(this.mail);
     fetch("http://3.124.237.156:8080/recover", {
       "method": "POST",
+      "headers": {
+        'Content-Type': 'application/json'
+      },
       "body": JSON.stringify({
         "email": this.mail
       })
