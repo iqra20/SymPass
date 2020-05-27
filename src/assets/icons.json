@@ -2,5 +2,465 @@
     {
       "title": "Mails",
       "url": "../../assets/icon/correo.png"
+    },
+    {
+      "title": "instagram",
+      "url": "../../assets/icon/instagram.png"
+    },{
+      "title": "academia_edu",
+      "url": "../../assets/icon/academia_edu.png"
+    },
+    {
+      "title": "airbnb",
+      "url": "../../assets/icon/airbnb.png"
+    },{
+      "title": "angelist",
+      "url": "../../assets/icon/angelist.png"
+    },
+    {
+      "title": "badoo",
+      "url": "../../assets/icon/badoo.png"
+    },
+    {
+      "title": "behance",
+      "url": "../../assets/icon/behance.png"
+    },
+    {
+      "title": "blackberry",
+      "url": "../../assets/icon/blackberry.png"
+    },
+    {
+      "title": "blogger",
+      "url": "../../assets/icon/blogger.png"
+    },
+    {
+      "title": "busuu",
+      "url": "../../assets/icon/busuu.png"
+    },
+    {
+      "title": "codepen",
+      "url": "../../assets/icon/codepen.png"
+    },
+    {
+      "title": "coderwall",
+      "url": "../../assets/icon/coderwall.png"
+    },
+    {
+      "title": "delicious",
+      "url": "../../assets/icon/delicious.png"
+    },
+    {
+      "title": "devianart",
+      "url": "../../assets/icon/devianart.png"
+    },
+    {
+      "title": "digg",
+      "url": "../../assets/icon/digg.png"
+    },
+    {
+      "title": "discord",
+      "url": "../../assets/icon/discord.png"
+    },
+    {
+      "title": "disqus",
+      "url": "../../assets/icon/disqus.png"
+    },
+    {
+      "title": "dribbble",
+      "url": "../../assets/icon/dribbble.png"
+    },
+    {
+      "title": "dropbox",
+      "url": "../../assets/icon/dropbox.png"
+    },
+    {
+      "title": "eddit",
+      "url": "../../assets/icon/eddit.png"
+    },
+    {
+      "title": "envato",
+      "url": "../../assets/icon/envato.png"
+    },
+    {
+      "title": "evernote",
+      "url": "../../assets/icon/evernote.png"
+    },
+    {
+      "title": "facebook",
+      "url": "../../assets/icon/facebook.png"
+    },
+    {
+      "title": "facebook1",
+      "url": "../../assets/icon/facebook1.png"
+    },
+    {
+      "title": "flickr",
+      "url": "../../assets/icon/flickr.png"
+    },
+    {
+      "title": "forrst",
+      "url": "../../assets/icon/forrst.png"
+    },
+    {
+      "title": "foursquare",
+      "url": "../../assets/icon/foursquare.png"
+    },
+    {
+      "title": "g_plus",
+      "url": "../../assets/icon/g_plus.png"
+    },
+    {
+      "title": "gab",
+      "url": "../../assets/icon/gab.png"
+    },
+    {
+      "title": "gag",
+      "url": "../../assets/icon/gag.png"
+    },
+    {
+      "title": "git",
+      "url": "../../assets/icon/git.png"
+    },
+    {
+      "title": "github",
+      "url": "../../assets/icon/github.png"
+    },
+    {
+      "title": "github1",
+      "url": "../../assets/icon/github1.png"
+    },
+    {
+      "title": "gofundme",
+      "url": "../../assets/icon/gofundme.png"
+    },
+    {
+      "title": "goodreads",
+      "url": "../../assets/icon/goodreads.png"
+    },
+    {
+      "title": "google allo",
+      "url": "../../assets/icon/google allo.png"
+    },
+    {
+      "title": "google drive",
+      "url": "../../assets/icon/google drive.png"
+    },
+    {
+      "title": "google hangouts",
+      "url": "../../assets/icon/google hangouts.png"
+    },
+    {
+      "title": "google_hangouts",
+      "url": "../../assets/icon/google_hangouts.png"
+    },
+    {
+      "title": "google_photos",
+      "url": "../../assets/icon/google_photos.png"
+    },
+    {
+      "title": "google_play",
+      "url": "../../assets/icon/google_play.png"
+    },
+    {
+      "title": "google_plus",
+      "url": "../../assets/icon/google_plus.png"
+    },
+    {
+      "title": "houzz",
+      "url": "../../assets/icon/houzz.png"
+    },
+    {
+      "title": "talk",
+      "url": "../../assets/icon/kakao talk.png"
+    },
+    {
+      "title": "kickstarter",
+      "url": "../../assets/icon/kickstarter.png"
+    },
+    {
+      "title": "kik",
+      "url": "../../assets/icon/kik.png"
+    },
+    {
+      "title": "klout",
+      "url": "../../assets/icon/klout.png"
+    },
+    {
+      "title": "lastfm",
+      "url": "../../assets/icon/lastfm.png"
+    },
+    {
+      "title": "lastfm1",
+      "url": "../../assets/icon/lastfm1.png"
+    },
+    {
+      "title": "line",
+      "url": "../../assets/icon/line.png"
+    },
+    {
+      "title": "linkedin",
+      "url": "../../assets/icon/linkedin.png"
+    },
+    {
+      "title": "medium",
+      "url": "../../assets/icon/medium.png"
+    },
+    {
+      "title": "medium1",
+      "url": "../../assets/icon/medium1.png"
+    },
+    {
+      "title": "meetme",
+      "url": "../../assets/icon/meetme.png"
+    },
+    {
+      "title": "meetup",
+      "url": "../../assets/icon/meetup.png"
+    },
+    {
+      "title": "messenger",
+      "url": "../../assets/icon/messenger.png"
+    },
+    {
+      "title": "myspace",
+      "url": "../../assets/icon/myspace.png"
+    },
+    {
+      "title": "odnoklassniki",
+      "url": "../../assets/icon/odnoklassniki.png"
+    },
+    {
+      "title": "open sourc",
+      "url": "../../assets/icon/open source.png"
+    },
+    {
+      "title": "path",
+      "url": "../../assets/icon/path.png"
+    },
+    {
+      "title": "patreon",
+      "url": "../../assets/icon/patreon.png"
+    },
+    {
+      "title": "periscope",
+      "url": "../../assets/icon/periscope.png"
+    },
+    {
+      "title": "photobucket",
+      "url": "../../assets/icon/photobucket.png"
+    },
+    {
+      "title": "picasa",
+      "url": "../../assets/icon/picasa.png"
+    },
+    {
+      "title": "pinboard",
+      "url": "../../assets/icon/pinboard.png"
+    },
+    {
+      "title": "pinterest",
+      "url": "../../assets/icon/pinterest.png"
+    },
+    {
+      "title": "pixabay",
+      "url": "../../assets/icon/pixabay.png"
+    },
+    {
+      "title": "plurk",
+      "url": "../../assets/icon/plurk.png"
+    },
+    {
+      "title": "plurk1",
+      "url": "../../assets/icon/plurk1.png"
+    },
+    {
+      "title": "product hunt",
+      "url": "../../assets/icon/product hunt.png"
+    },
+    {
+      "title": "quora",
+      "url": "../../assets/icon/quora.png"
+    },
+    {
+      "title": "revebnation",
+      "url": "../../assets/icon/revebnation.png"
+    },
+    {
+      "title": "rss",
+      "url": "../../assets/icon/rss.png"
+    },
+    {
+      "title": "sina weibo",
+      "url": "../../assets/icon/sina weibo.png"
+    },
+    {
+      "title": "skillshare",
+      "url": "../../assets/icon/skillshare.png"
+    },
+    {
+      "title": "skype",
+      "url": "../../assets/icon/skype.png"
+    },
+    {
+      "title": "slack",
+      "url": "../../assets/icon/slack.png"
+    },
+    {
+      "title": "slack1",
+      "url": "../../assets/icon/slack1.png"
+    },
+    {
+      "title": "snapchat",
+      "url": "../../assets/icon/snapchat.png"
+    },
+    {
+      "title": "soundcloud",
+      "url": "../../assets/icon/soundcloud.png"
+    },
+    {
+      "title": "spotify",
+      "url": "../../assets/icon/spotify.png"
+    },
+    {
+      "title": "stack overflow",
+      "url": "../../assets/icon/stack overflow.png"
+    },
+    {
+      "title": "steam",
+      "url": "../../assets/icon/steam.png"
+    },
+    {
+      "title": "stumbleupon",
+      "url": "../../assets/icon/stumbleupon.png"
+    },
+    {
+      "title": "swarm",
+      "url": "../../assets/icon/swarm.png"
+    },
+    {
+      "title": "tagged",
+      "url": "../../assets/icon/tagged.png"
+    },
+    {
+      "title": "team viewer",
+      "url": "../../assets/icon/team viewer.png"
+    },
+    {
+      "title": "telegram",
+      "url": "../../assets/icon/telegram.png"
+    },
+    {
+      "title": "telegram1",
+      "url": "../../assets/icon/telegram1.png"
+    },
+    {
+      "title": "tinder",
+      "url": "../../assets/icon/tinder.png"
+    },
+    {
+      "title": "trello",
+      "url": "../../assets/icon/trello.png"
+    },
+    {
+      "title": "tumblr",
+      "url": "../../assets/icon/tumblr.png"
+    },
+    {
+      "title": "twitch",
+      "url": "../../assets/icon/twitch.png"
+    },
+    {
+      "title": "twitter",
+      "url": "../../assets/icon/twitter.png"
+    },
+    {
+      "title": "twitter1",
+      "url": "../../assets/icon/twitter1.png"
+    },
+    {
+      "title": "twoo",
+      "url": "../../assets/icon/twoo.png"
+    },
+    {
+      "title": "uber",
+      "url": "../../assets/icon/uber.png"
+    },
+    {
+      "title": "unspash",
+      "url": "../../assets/icon/unspash.png"
+    },
+    {
+      "title": "viber",
+      "url": "../../assets/icon/viber.png"
+    },
+    {
+      "title": "viddler",
+      "url": "../../assets/icon/viddler.png"
+    },
+    {
+      "title": "vimeo",
+      "url": "../../assets/icon/vimeo.png"
+    },
+    {
+      "title": "vine",
+      "url": "../../assets/icon/vine.png"
+    },
+    {
+      "title": "VK",
+      "url": "../../assets/icon/VK.png"
+    },
+    {
+      "title": "vlive",
+      "url": "../../assets/icon/vlive.png"
+    },
+    {
+      "title": "wattpad",
+      "url": "../../assets/icon/wattpad.png"
+    },
+    {
+      "title": "waze",
+      "url": "../../assets/icon/waze.png"
+    },
+    {
+      "title": "wechat",
+      "url": "../../assets/icon/wechat.png"
+    },
+    {
+      "title": "whatsapp",
+      "url": "../../assets/icon/whatsapp.png"
+    },
+    {
+      "title": "wordpress",
+      "url": "../../assets/icon/wordpress.png"
+    },
+    {
+      "title": "xanga",
+      "url": "../../assets/icon/xanga.png"
+    },
+    {
+      "title": "xing",
+      "url": "../../assets/icon/xing.png"
+    },
+    {
+      "title": "yahoo",
+      "url": "../../assets/icon/yahoo.png"
+    },
+    {
+      "title": "yahoo1",
+      "url": "../../assets/icon/yahoo1.png"
+    },
+    {
+      "title": "yelp",
+      "url": "../../assets/icon/yelp.png"
+    },
+    {
+      "title": "youtube1",
+      "url": "../../assets/icon/youtube1.png"
+    },
+    {
+      "title": "zootool",
+      "url": "../../assets/icon/zootool.png"
     }
-  ]
+  
+    
+]
