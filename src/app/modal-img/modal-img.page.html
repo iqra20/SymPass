@@ -8,9 +8,4 @@
   <ion-item class="tarjeta" *ngFor="let icon of iconList" (click)="getImage(icon)" >
     <ion-img class="icon"  src="{{icon.url}}"></ion-img>
   </ion-item> 
- <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="create()">
-    <ion-fab-button color="light" size="small">
-      <ion-icon style=" color: #000;"name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>
