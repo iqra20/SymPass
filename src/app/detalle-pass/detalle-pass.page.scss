@@ -3,6 +3,12 @@
     font-family: Bahnschrift Condensed;
     color:white;
 }
+:host {
+
+    .item-interactive.ion-valid{
+      --highlight-background: #bb64bb !important;
+    }
+  }
 .list{
     padding-left: 15px;
     padding-right: 15px;

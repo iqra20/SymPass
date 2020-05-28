@@ -12,9 +12,14 @@
     padding-left: 70px;
     
 }
+:host {
 
+    .item-interactive.ion-valid{
+      --highlight-background: #bb64bb !important;
+    }
+  }
 .list{
-    padding-left: 15px;
+    padding-left: 20px;
     padding-right: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -23,31 +28,20 @@
 //text de sign in
 .header{
     padding-left: 38%;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #bb64bb;
     margin-bottom: 0px;
     text-align: center;
     font-family: Bahnschrift Condensed;
 }
-.name{
-    border: 2px solid #bb64bb;
-    border-radius: 25px;
-    margin-bottom: 5px;
-}
-.email{
-    border: 2px solid #bb64bb;
-    border-radius: 25px;
-    margin-bottom: 5px;
-}
-.pass{
-    border: 2px solid #bb64bb;
-    border-radius: 25px;
-    margin-bottom: 5px;
+ion-label{
+   
+    font-size: medium; 
+    position: static;
 }
 .telefon{
-    border: 2px solid #bb64bb;
-    border-radius: 25px;
-    margin-bottom: 5px;
+   // border-bottom: 2px solid #bb64bb;
+   margin-bottom: 5px;
 }
 .btn{
     //margin: 15px;

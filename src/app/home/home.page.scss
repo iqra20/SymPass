@@ -22,21 +22,27 @@ ion-card-header{
 }
 
 ion-label{
- font-weight: bolder; 
- font-size: medium; 
-
+ //font-weight: bolder; 
+ font-size: small; 
 }
+:host {
+
+    .item-interactive.ion-valid{
+      --highlight-background: #bb64bb !important;
+    }
+  }
 //campo de mail
-.mail:active {
+.mail{
      margin-bottom: 5px;
-     --border-color:blue;
  }
  //campo de password
  .passw{
      margin-bottom: 10px;
+
  }
  .forgot .icon{
-    color:#bb64bb;
+    //color:#bb64bb;
+    color:black;
     margin-right: 5px;
     margin-top: 5px;
     padding-left: 50px;
@@ -44,7 +50,8 @@ ion-label{
 .forgot a{
     text-size-adjust: inherit;
     font-size: 1em;
-    color: #bb64bb;
+   // color: #bb64bb;
+    color: black;
 }
 //sign up button
 .up{

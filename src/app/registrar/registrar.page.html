@@ -8,25 +8,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  id="content">
+<ion-content fullscreen id="content">
   <img class="logo" src="../../assets/6.png "/>
-  
   <ion-list class="list">
     <ion-list-header class="header">
       Sign up
     </ion-list-header>
-    <ion-item class="name" lines="none"> 
-      <ion-input clearInput placeholder="name" [(ngModel)]="name" type="text"></ion-input>
+    <ion-item class="name" > 
+      <ion-label id="label" position="floating">Name</ion-label>
+      <ion-input clearInput [(ngModel)]="name" type="text"></ion-input>
     </ion-item>
-    <ion-item class="email" lines="none">
-      <ion-input  clearInput placeholder="email" [(ngModel)]="email"  type="email"></ion-input>
+    <ion-item class="email" >
+      <ion-label id="label" position="floating">Email</ion-label>
+      <ion-input  clearInput  [(ngModel)]="email"  type="email"></ion-input>
     </ion-item>
-    <ion-item class="pass" lines="none">
-      <ion-input  clearInput placeholder="password" [(ngModel)]="pass" type="password"></ion-input>
+    <ion-item class="pass">
+      <ion-label id="label" position="floating">Password</ion-label>
+      <ion-input  clearInput  [(ngModel)]="pass" type="password"></ion-input>
     </ion-item>
-    <ion-item class="telefon" lines="none">
-      <ion-input clearInput placeholder="telephone" [(ngModel)]="telephone" type="text"></ion-input>
+    <ion-item class="telefon">
+      <ion-label id="label" position="floating">Telefon</ion-label>
+      <ion-input clearInput [(ngModel)]="telephone" type="text"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button class="btn" expand="block" shape="round"  (click)="check()" color="secondary">Sign up</ion-button>
+  <ion-button class="btn" expand="block" (click)="check()" color="secondary">Sign up</ion-button>
 </ion-content>
