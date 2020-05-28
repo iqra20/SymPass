@@ -6,22 +6,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content fullscreen>
   <ion-card center class="card">
-    <img class="logo" src="./../../../assets/5.png "/>
+    <img class="logo" src="./../../../assets/6.png "/>
     <ion-card-header class="text-signIn">
       Sign in
     </ion-card-header>
-
     <ion-card-content >
-        <ion-item class="mail" lines="none">
-          <ion-input clearInput placeholder="email" [(ngModel)]="email" type="email"></ion-input>
+        <ion-item class="mail"  >
+          <ion-label id="label" position="stacked">Email</ion-label>
+          <ion-input clearInput [(ngModel)]="email" type="email"></ion-input>
         </ion-item>
-        <ion-item class="passw" lines="none">
-          <ion-input  clearInput type="password"  placeholder="password" [(ngModel)]="pass" ></ion-input>
+        <ion-item  class="passw" >
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input  clearInput type="password" [(ngModel)]="pass" ></ion-input>
         </ion-item>
       <div class="forgot">
-        <ion-button id="signIn" expand="block" shape="round"  (click)="checkAccount()">Sign in</ion-button>
+        <ion-button id="signIn" expand="block"  (click)="checkAccount()" color="secondary">Sign in</ion-button>
         <ion-icon class="icon" name="lock-closed"></ion-icon>
         <a routerLink="/forgot">forgot password?</a>
       </div>

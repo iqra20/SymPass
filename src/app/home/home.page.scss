@@ -4,58 +4,39 @@
     font-family: Bahnschrift Condensed;
     color:white;
 }
-
 ion-card-header{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-ion-list{
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-//color de cuadro
-.card{
-    background-color: #bb64bb;
-    max-height: 385px;
-    max-width: 300px;
-}
 //logo modification
 .logo{
-    padding-top: 20px;
-    padding-left: 50px;
+    padding-top: 15px;
+    padding-left: 60px;
 }
 //sign in text
 .text-signIn{
     text-align: center;
-    color: white;
+    color:#bb64bb;
     font-size: 1.6em;
     font-family: Bahnschrift Condensed;
 }
-//campo de email
-.list{
-    --background: #bb64bb;
-} 
-.mail {
-    border: 2px solid #bb64bb;
-    border-radius: 25px;
-    margin-bottom: 5px;
-    color:black;
+
+ion-label{
+ font-weight: bolder; 
+ font-size: medium; 
+
 }
-//campo de password
-.passw{
-    border: 2px solid #bb64bb;
-    border-radius: 25px;
-    margin-bottom: 5px;
-    margin-bottom: 20px;
-}
-//botton
-.forgot #signIn{
-    box-sizing: content-box;
-    
-}
-.forgot .icon{
-    color: white;
+//campo de mail
+.mail:active {
+     margin-bottom: 5px;
+     --border-color:blue;
+ }
+ //campo de password
+ .passw{
+     margin-bottom: 10px;
+ }
+ .forgot .icon{
+    color:#bb64bb;
     margin-right: 5px;
     margin-top: 5px;
     padding-left: 50px;
@@ -63,7 +44,7 @@ ion-list{
 .forgot a{
     text-size-adjust: inherit;
     font-size: 1em;
-    color: white;
+    color: #bb64bb;
 }
 //sign up button
 .up{
