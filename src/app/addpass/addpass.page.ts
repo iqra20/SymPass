@@ -25,7 +25,20 @@ export class AddpassPage implements OnInit {
     });
   }
   public id :string;
+
+  caracteres="a";
+
+
+
   ngOnInit() {
+  }
+
+  generatePass(){
+    this.password="";
+    const num=Math.floor(Math.random() * 8) + 7;
+    for(let i=0;num>0;i++){
+      this.password+=this.caracteres.charAt(Math.floor(Math.random()*this.caracteres.length));
+    }
   }
 
   async openModal(){

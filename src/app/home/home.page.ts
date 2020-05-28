@@ -16,6 +16,10 @@ export class HomePage {
   constructor(private router: Router) { 
 
   }
+  ionViewWillEnter(){
+    this.email="";
+    this.pass="";
+  }
 
   async checkAccount(){
     

@@ -15,11 +15,11 @@
     <ion-card-content >
         <ion-item class="mail"  >
           <ion-label id="label" position="stacked">Email</ion-label>
-          <ion-input clearInput [(ngModel)]="email" type="email"></ion-input>
+          <ion-input [(ngModel)]="email" type="email"></ion-input>
         </ion-item>
         <ion-item  class="passw" >
           <ion-label position="stacked">Password</ion-label>
-          <ion-input  clearInput type="password" [(ngModel)]="pass" ></ion-input>
+          <ion-input type="password" [(ngModel)]="pass" ></ion-input>
         </ion-item>
       <div class="forgot">
         <ion-button id="signIn" expand="block"  (click)="checkAccount()" color="secondary">Sign in</ion-button>
