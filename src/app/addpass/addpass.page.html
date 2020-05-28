@@ -7,23 +7,28 @@
     <ion-title>Añadir Password</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="fondo">
-  <ion-list class="list">
+<ion-content class="fondo ">
+  <ion-list class="list" >
     <img class="img" (click)="openModal()" src="{{icon}}">
-    <ion-item item-right class="mainItems">
-      <ion-input [(ngModel)]="title" placeholder="title"></ion-input>
+    <ion-item item-right class="mainItems" lines="none">
+      <ion-label position="stacked"> Title</ion-label>
+      <ion-input [(ngModel)]="title"></ion-input>
     </ion-item>
-    <ion-item class="mainItems">
-      <ion-input [(ngModel)]="username" placeholder="username"></ion-input>
+    <ion-item class="mainItems" lines="none">
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input  [(ngModel)]="username" placeholder=""></ion-input>
     </ion-item>
-    <ion-item class="inputItem">
-      <ion-input [(ngModel)]="password" placeholder="password"></ion-input>
+    <ion-item class="inputItem" lines="none">
+       <ion-label position="stacked">Password</ion-label>
+      <ion-input [(ngModel)]="password"></ion-input>
     </ion-item>
-    <ion-item class="inputItem">
-      <ion-input [(ngModel)]="link" placeholder="link"></ion-input>
+    <ion-item class="inputItem" lines="none">
+      <ion-label position="stacked">Link</ion-label>
+      <ion-input [(ngModel)]="link" ></ion-input>
     </ion-item>
-    <ion-item class="inputItem">
-      <ion-textarea [(ngModel)]="description" placeholder="description"></ion-textarea>
+    <ion-item class="inputItem"lines="none">
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea [(ngModel)]="description"></ion-textarea>
     </ion-item>
     <ion-item class="inputItem">
       <ion-label>Type</ion-label>
@@ -35,8 +40,5 @@
     </ion-select>
     </ion-item>
   </ion-list>
-  <div id="btns">
-    <ion-button  class="save" (click)="anadirPass()" color="secondary">Save</ion-button>
-    <ion-button  class="can" routerLink="/lista" color="secondary" fill="outline">Cancel</ion-button>
-  </div>
+  <ion-button  class="save" expand="block" (click)="anadirPass()" color="secondary" shape="round">Save</ion-button>
 </ion-content>
