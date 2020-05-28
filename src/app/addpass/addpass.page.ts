@@ -56,6 +56,7 @@ export class AddpassPage implements OnInit {
   async cancelar(){
     
   }
+
   async anadirPass() {
     fetch("http://3.124.237.156:8080/password/"+this.id, {
       "method": "POST",

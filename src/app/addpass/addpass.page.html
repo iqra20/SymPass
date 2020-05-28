@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar id="header">
     <ion-buttons slot="start">
@@ -7,28 +6,29 @@
     <ion-title>Añadir Password</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="fondo ">
+<ion-content fullscreen class="fondo ">
   <ion-list class="list" >
     <img class="img" (click)="openModal()" src="{{icon}}">
-    <ion-item item-right class="mainItems" lines="none">
-      <ion-label position="stacked"> Title</ion-label>
-      <ion-input [(ngModel)]="title"></ion-input>
+    <ion-item item-right class="mainItems" >
+      <ion-label  position="floating"> Title</ion-label>
+      <ion-input clearInput="clear-input" [(ngModel)]="title"></ion-input>
     </ion-item>
-    <ion-item class="mainItems" lines="none">
-      <ion-label position="stacked">Username</ion-label>
-      <ion-input  [(ngModel)]="username" placeholder=""></ion-input>
+    <ion-item class="mainItems" >
+      <ion-label position="floating">Username</ion-label>
+      <ion-input clearInput="clear-input" [(ngModel)]="username" ></ion-input>
     </ion-item>
-    <ion-item class="inputItem" lines="none">
-       <ion-label position="stacked">Password</ion-label>
-      <ion-input [(ngModel)]="password"></ion-input>
+    <ion-item class="inputItem" >
+      <ion-label position="floating">Password</ion-label>
+      <ion-input clearInput="clear-input" [(ngModel)]="password"></ion-input>
+      <ion-icon class="icon" name="refresh" slot="end" (click)="generatePass()"></ion-icon>
     </ion-item>
-    <ion-item class="inputItem" lines="none">
-      <ion-label position="stacked">Link</ion-label>
-      <ion-input [(ngModel)]="link" ></ion-input>
+    <ion-item class="inputItem" >
+      <ion-label position="floating">Link</ion-label>
+      <ion-input clearInput="clear-input" [(ngModel)]="link" ></ion-input>
     </ion-item>
-    <ion-item class="inputItem"lines="none">
-      <ion-label position="stacked">Description</ion-label>
-      <ion-textarea [(ngModel)]="description"></ion-textarea>
+    <ion-item class="inputItem">
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea  [(ngModel)]="description"></ion-textarea>
     </ion-item>
     <ion-item class="inputItem">
       <ion-label>Type</ion-label>
@@ -40,5 +40,5 @@
     </ion-select>
     </ion-item>
   </ion-list>
-  <ion-button  class="save" expand="block" (click)="anadirPass()" color="secondary" shape="round">Save</ion-button>
+  <ion-button  class="save" expand="block" (click)="anadirPass()" color="secondary" >Save</ion-button>
 </ion-content>
