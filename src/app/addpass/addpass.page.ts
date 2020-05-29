@@ -37,6 +37,8 @@ export class AddpassPage implements OnInit {
           this.icon=this.pass.icon;
           this.api=this.router.getCurrentNavigation().extras.state.api;
           this.id=this.pass.id;
+        }else{
+          this.api="POST"
         }
       }
     });
