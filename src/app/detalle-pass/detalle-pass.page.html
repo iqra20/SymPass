@@ -22,10 +22,8 @@
     <ion-item
      class="inputItem">
       <ion-label  position="stacked">Password</ion-label>
-      <ion-input  readonly="true" type="password" [(ngModel)]="pass">{{password.password}}</ion-input>
-      <button class="icon" slot="end" (click)="seePass()">
-        <ion-icon [name]="visible ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
-      </button>
+      <ion-input  name="password" [type]="showPassword ? 'text' : 'password'" value="{{password.password}}"></ion-input>
+      <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
     </ion-item>
     <ion-item class="inputItem">
       <ion-label position="stacked">Link</ion-label>

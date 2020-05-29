@@ -19,7 +19,8 @@ export class AddpassPage implements OnInit {
   link :string;
   description :string;
   icon:string="../../assets/icon/img.png";
-  color:string;
+  color="warning";
+  value=0;
   constructor(private router: Router,private route: ActivatedRoute,private modalCtrl:ModalController) { 
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
@@ -37,6 +38,8 @@ export class AddpassPage implements OnInit {
           this.icon=this.pass.icon;
           this.api=this.router.getCurrentNavigation().extras.state.api;
           this.id=this.pass.id;
+        }else{
+          this.api="POST";
         }
       }
     });
@@ -61,8 +64,8 @@ export class AddpassPage implements OnInit {
       this.password+=this.caracteres.charAt(Math.floor(Math.random()*this.caracteres.length));
     }
     console.log("pass aleatoria= "+this.password)
-    console.log("seguridad="+this.comprobarPassword());
-    if(this.comprobarPassword()<10){
+    console.log("seguridad="+this.comprobarPassword(this.password));
+    if(this.comprobarPassword(this.password)<8){
       console.log("falta seguridad..")
       this.generatePass();
     }
@@ -113,8 +116,9 @@ export class AddpassPage implements OnInit {
     
     }
     onKey(newValue) {
-      this.seguridad=this.comprobarPassword();
-      console.log("seguridad de tu pass");
+      console.log(newValue);
+      this.seguridad=this.comprobarPassword(newValue);
+      console.log("seguridad de tu pass: "+newValue);
       if(this.seguridad>9){
         console.log("pass fuerte");
       }else{
@@ -125,68 +129,78 @@ export class AddpassPage implements OnInit {
         }
       }
   }
-    comprobarPassword():number{
+    comprobarPassword(password):number{
       this.seguridad = 0;
-      if (this.password.length!=0){
-        if(this.tiene_minusculas&&this.tiene_majusculas()&&this.tiene_numeros()&&this.tiene_simbolos()){
+      if (password.length!=0){
+        if(this.tiene_minusculas&&this.tiene_majusculas(password)&&this.tiene_numeros(password)&&this.tiene_simbolos(password)){
           this.seguridad+=7;
         }else{
-          if (this.tiene_numeros() && this.tiene_minusculas()||this.tiene_majusculas){
+          if (this.tiene_numeros(password) && this.tiene_minusculas(password)||this.tiene_majusculas(password)){
             this.seguridad += 2;
          }
-         if (this.tiene_minusculas() && this.tiene_majusculas()){
+         if (this.tiene_minusculas(password) && this.tiene_majusculas(password)){
             this.seguridad += 2;
          }
-         if(this.tiene_simbolos()){
-           this.seguridad+=2;
+         if(this.tiene_simbolos(password)){
+           this.seguridad+=3;
          }
         }
-        if(this.password.length<4){
+        if(password.length<4){
           this.seguridad=0;
         }else{
-          if (this.password.length >= 4 && this.password.length <= 5){
-            this.seguridad += 2;
+          if (password.length >= 4 && password.length <= 5){
+            this.seguridad += 1;
            }else{
-              if (this.password.length >= 6 && this.password.length <= 8){
-                this.seguridad += 3;
+              if (password.length >= 6 && password.length <= 8){
+                this.seguridad += 2;
               }else{
-                 if (this.password.length > 8){
-                    this.seguridad += 5;
+                 if (password.length > 8){
+                    this.seguridad += 3;
                  }
               }
            }
         }   
       }  
+      console.log(this.seguridad);
+      this.value=this.seguridad/10;
+      console.log(this.value);
+      if(this.value<0.5){
+        this.color="danger";
+      }else if(this.value<0.8){
+        this.color="warning";
+      }else{
+        this.color="success";
+      }
       return this.seguridad;        
    }   
-   tiene_minusculas():boolean{
-     for(let i=0;i<this.password.length;i++){
-       if(this.password.charAt(i)>='a'&& this.password.charAt(i)<='z'){
+   tiene_minusculas(password):boolean{
+     for(let i=0;i<password.length;i++){
+       if(password.charAt(i)>='a'&& password.charAt(i)<='z'){
         return true;
        }
      }
      return false;
    }
-   tiene_majusculas():boolean{
-    for(let i=0;i<this.password.length;i++){
-      if(this.password.charAt(i)>='A'&& this.password.charAt(i)<='Z'){
+   tiene_majusculas(password):boolean{
+    for(let i=0;i<password.length;i++){
+      if(password.charAt(i)>='A'&& password.charAt(i)<='Z'){
        return true;
       }
     }
     return false;
    }
-   tiene_numeros():boolean{
-    for(let i=0;i<this.password.length;i++){
-      if(this.password.charAt(i)>='0'&& this.password.charAt(i)<='9'){
+   tiene_numeros(password):boolean{
+    for(let i=0;i<password.length;i++){
+      if(password.charAt(i)>='0'&& password.charAt(i)<='9'){
        return true;
       }
     }
     return false;
    }
-   tiene_simbolos():boolean{
+   tiene_simbolos(password):boolean{
      let simbolos:any[]=['!','@','#','$','%','^','&','*','(',')','_','-','+','=','{','[','}','}',';',':','<',',','>','.','?','/'];
-    for(let i=0;i<this.password.length;i++){
-      if(simbolos.indexOf(this.password.charAt(i)!)!=-1){
+    for(let i=0;i<password.length;i++){
+      if(simbolos.indexOf(password.charAt(i)!)!=-1){
        return true;
       }
     }

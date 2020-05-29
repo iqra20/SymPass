@@ -19,8 +19,10 @@ export class DetallePassPage implements OnInit {
   type:number;
   id:string;
   text:string;
-  passIcon="eye-outline";
-  visible=false;
+
+  showPassword= false;
+  passwordToggleIcon = 'eye';
+
   constructor(private route: ActivatedRoute, private router: Router,private modalCtrl:ModalController) {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
@@ -30,7 +32,7 @@ export class DetallePassPage implements OnInit {
         console.log(this.id);
       }
     });
-    
+
    }
   ngOnInit() {
     this.type=this.password.type;
@@ -46,14 +48,17 @@ export class DetallePassPage implements OnInit {
     }
     console.log(this.type);
   }
-  seePass(){
-    console.log("hola");
-    if(this.visible){
-      this.visible=false;
+
+  togglePassword():void{
+    this.showPassword=!this.showPassword;
+
+    if(this.passwordToggleIcon=='eye'){
+      this.passwordToggleIcon='eye-off';
     }else{
-      this.visible=true;
+      this.passwordToggleIcon='eye';
     }
   }
+
   async openModal(){
     const modal=await this.modalCtrl.create({
       component: ModalImgPage,

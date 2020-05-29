@@ -19,11 +19,12 @@
     </ion-item>
     <ion-item class="inputItem" >
       <ion-label position="floating">Password</ion-label>
-      <ion-input clearInput="clear-input" [(ngModel)]="password" (input)="onKey()"></ion-input>
+      <ion-input clearInput="clear-input" [(ngModel)]="password" (input)="onKey($event.target.value)"></ion-input>
       <button class="icon" slot="end" (click)="generatePass()">
         <ion-icon name="refresh"></ion-icon>
       </button>
     </ion-item>
+    <ion-progress-bar style="margin-top: 10px; --buffer-background:grey ;"aria-valuenow="0" color="{{color}}" value="{{value}}"></ion-progress-bar>
     <ion-item class="inputItem" >
       <ion-label position="floating">Link</ion-label>
       <ion-input clearInput="clear-input" [(ngModel)]="link" ></ion-input>
