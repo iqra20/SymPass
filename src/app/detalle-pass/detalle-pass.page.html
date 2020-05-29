@@ -19,8 +19,7 @@
       <ion-label position="stacked">Username</ion-label>
       <ion-input readonly="true" [(ngModel)]="username">{{password.username}}</ion-input>
     </ion-item>
-    <ion-item
-     class="inputItem">
+    <ion-item class="inputItem">
       <ion-label  position="stacked">Password</ion-label>
       <ion-input  name="password" [type]="showPassword ? 'text' : 'password'" value="{{password.password}}"></ion-input>
       <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
