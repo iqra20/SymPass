@@ -5,7 +5,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-buttons right>
-      <ion-title>Detalle Password</ion-title>
+      <ion-title>{{password.title}}</ion-title>
       <ion-button fill="clear" (click)="Delete()">
         <ion-icon name="trash"></ion-icon>
       </ion-button>
@@ -17,20 +17,24 @@
   <ion-list class="list">
     <ion-item class="inputItem">
       <ion-label position="stacked">Username</ion-label>
-      <ion-input disabled="true" [(ngModel)]="username">{{password.username}}</ion-input>
+      <ion-input readonly="true" [(ngModel)]="username">{{password.username}}</ion-input>
     </ion-item>
-    <ion-item class="inputItem">
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input disabled="true" [(ngModel)]="pass">{{password.password}}</ion-input>
+    <ion-item
+     class="inputItem">
+      <ion-label  position="stacked">Password</ion-label>
+      <ion-input  readonly="true" type="password" [(ngModel)]="pass">{{password.password}}</ion-input>
+      <button class="icon" slot="end" (click)="seePass()">
+        <ion-icon [name]="visible ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+      </button>
     </ion-item>
     <ion-item class="inputItem">
       <ion-label position="stacked">Link</ion-label>
-      <ion-input disabled="false" [(ngModel)]="link"><a href="{{password.link}}" target="_blank">{{password.link}}</a></ion-input>
+      <ion-input readonly="true" [(ngModel)]="link"><a href="{{password.link}}" target="_blank">{{password.link}}</a></ion-input>
     </ion-item>
     <ion-item class="inputItem">
       <ion-label position="stacked">description</ion-label>
-      <ion-input disabled="true" [(ngModel)]="description">{{password.description}}</ion-input>
+      <ion-input readonly="true" [(ngModel)]="description">{{password.description}}</ion-input>
     </ion-item>
   </ion-list>
-  <ion-button  class="edit" routerLink="/addpass" color="secondary" expand="block">Edit</ion-button>
+  <ion-button  class="edit" color="secondary" (click)="anadirPass()" expand="block">Edit</ion-button>
 </ion-content>
