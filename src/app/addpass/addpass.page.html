@@ -20,7 +20,9 @@
     <ion-item class="inputItem" >
       <ion-label position="floating">Password</ion-label>
       <ion-input clearInput="clear-input" [(ngModel)]="password"></ion-input>
-      <ion-icon class="icon" name="refresh" slot="end" (click)="generatePass()"></ion-icon>
+      <button class="icon" slot="end" (click)="generatePass()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
     </ion-item>
     <ion-item class="inputItem" >
       <ion-label position="floating">Link</ion-label>

@@ -26,7 +26,7 @@ export class AddpassPage implements OnInit {
   }
   public id :string;
 
-  caracteres="a";
+  caracteres="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+={[}};:<,>.?/";
 
 
 
@@ -34,11 +34,16 @@ export class AddpassPage implements OnInit {
   }
 
   generatePass(){
+    console.log("entro");
     this.password="";
+    console.log("pass vacia");
     const num=Math.floor(Math.random() * 8) + 7;
-    for(let i=0;num>0;i++){
+    console.log("length pass decidida="+num);
+    for(let i=0;num>i;i++){
+      console.log("dentro de bucle n:"+1)
       this.password+=this.caracteres.charAt(Math.floor(Math.random()*this.caracteres.length));
     }
+    console.log("pass aleatoria= "+this.password)
   }
 
   async openModal(){
