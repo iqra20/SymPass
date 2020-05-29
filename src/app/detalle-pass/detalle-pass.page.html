@@ -4,37 +4,33 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Detalle Password</ion-title>
+    <ion-buttons right>
+      <ion-title>Detalle Password</ion-title>
+      <ion-button fill="clear" (click)="Delete()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="fondo">
   <ion-list class="list">
-    <img class="img" (click)="openModal()" src="{{password.icon}}">
-    <ion-item item-right class="mainItems">
-      <ion-input [(ngModel)]="title" placeholder="{{password.title}}"></ion-input>
-    </ion-item>
-    <ion-item class="mainItems">
-      <ion-input [(ngModel)]="username" placeholder="{{password.username}}"></ion-input>
+    <ion-item class="inputItem">
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input disabled="true" [(ngModel)]="username">{{password.username}}</ion-input>
     </ion-item>
     <ion-item class="inputItem">
-      <ion-input [(ngModel)]="pass" placeholder="{{password.password}}"></ion-input>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input disabled="true" [(ngModel)]="pass">{{password.password}}</ion-input>
     </ion-item>
     <ion-item class="inputItem">
-      <ion-input [(ngModel)]="link" placeholder="{{password.link}}"></ion-input>
+      <ion-label position="stacked">Link</ion-label>
+      <ion-input disabled="false" [(ngModel)]="link"><a href="{{password.link}}" target="_blank">{{password.link}}</a></ion-input>
     </ion-item>
     <ion-item class="inputItem">
-      <ion-textarea [(ngModel)]="description" placeholder="{{password.description}}"></ion-textarea>
-    </ion-item>
-    <ion-item class="inputItem">
-      <ion-label>Type</ion-label>
-    <ion-select id="customTypeSelec" [(ngModel)]="type" placeholder="{{text}}" interface="popover">
-      <ion-select-option value="0">Social</ion-select-option>
-      <ion-select-option value="1">Mail</ion-select-option>
-      <ion-select-option value="2">Work</ion-select-option>
-      <ion-select-option value="3">Extra</ion-select-option>
-    </ion-select>
+      <ion-label position="stacked">description</ion-label>
+      <ion-input disabled="true" [(ngModel)]="description">{{password.description}}</ion-input>
     </ion-item>
   </ion-list>
-  <ion-button  class="can" (click)="Delete()" color="secondary" fill="outline" shape="round">Delete</ion-button>
+  <ion-button  class="edit" routerLink="/addpass" color="secondary" expand="block">Edit</ion-button>
 </ion-content>

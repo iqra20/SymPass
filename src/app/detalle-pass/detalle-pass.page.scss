@@ -4,7 +4,6 @@
     color:white;
 }
 :host {
-
     .item-interactive.ion-valid{
       --highlight-background: #bb64bb !important;
     }
@@ -19,21 +18,10 @@
     position: absolute;
     width: 5em;   
 }
-    
-.mainItems{
-    border: 2px solid #bb64bb;
-    height: 3em;
-    margin-left: 6em;
-    border-radius: 30px;
-    margin-bottom: 5px;
-}
 .inputItem{
-    border: 2px solid  #bb64bb;
-    border-radius: 30px;
-    margin-bottom: 5px;
-    padding-right: 0px;
+    margin-bottom: 10px;
 }
-.save{
+.edit{
     height: 40px;
     padding-left: 15px;
     padding-right: 15px;
