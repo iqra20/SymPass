@@ -28,7 +28,8 @@ export class ListaPage {
     console.log(password);
     let navigationExtras: NavigationExtras = {
       state: {
-        parametros: password
+        parametros: password,
+        id:this.id
       }
     };
     this.router.navigate(['detalle-pass'], navigationExtras);
@@ -37,7 +38,7 @@ export class ListaPage {
   create(){
     let navigationExtras: NavigationExtras = {
       state: {
-        parametros: this.id
+        id: this.id
       }
     };
     this.router.navigate(['addpass'], navigationExtras);
