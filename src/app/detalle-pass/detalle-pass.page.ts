@@ -21,7 +21,7 @@ export class DetallePassPage implements OnInit {
   text:string;
 
   showPassword= false;
-  passwordToggleIcon = 'eye';
+  passwordToggleIcon = 'eye-off';
 
   constructor(private route: ActivatedRoute, private router: Router,private modalCtrl:ModalController) {
     this.route.queryParams.subscribe(params => {
@@ -70,8 +70,18 @@ export class DetallePassPage implements OnInit {
     this.password.icon=data.url;
   }
 
-  async Delete(){
-    fetch("http://3.124.237.156:8080/password/"+this.password.id, {
+  delete(){
+    const alert = document.createElement('ion-alert');
+    alert.header = 'Warning';
+    alert.message = 'Are you sure you want to delete this password?';
+    alert.buttons = [
+      {text:'Cancel'},
+      {text:'Delete',handler:()=>{this.deletePass()}}];
+    document.body.appendChild(alert);
+    return alert.present();
+    }
+    async deletePass(){
+      fetch("http://3.124.237.156:8080/password/"+this.password.id, {
       "method": "DELETE"
     })
       .then(response => {
@@ -82,6 +92,7 @@ export class DetallePassPage implements OnInit {
         console.log(err);
       });
     }
+
   anadirPass() {
     console.log("editando...");
     console.log(this.password);
